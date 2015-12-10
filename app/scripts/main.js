@@ -1,3 +1,6 @@
+/* eslint-disable no-console */
+/* globals Ractive */
+
 (function(){
 
   var apiKey = '9wur7sdh84azzazdt3ye54k4',
