@@ -374,8 +374,8 @@ module.exports = function (grunt) {
       },
       stage: {
         options: {
-          remote: 'nbed_sshUsername@nbed_sshHost:mash-tun.net/0distilled/guardian dev test/.git',
-          branch: 'master'
+          remote: 'git@github.com:richardwestenra/guardian-dev-test.git',
+          branch: 'gh-pages'
         }
       },
       local: {

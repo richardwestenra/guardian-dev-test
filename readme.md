@@ -1,17 +1,8 @@
-# Build Brief
+# Dev Test
 
+## View demo:
 
-## Documents
-
-
-## Fonts 
-
-
-## Colours
-
-
-## Functionality notes
-
+There should be a working demo hosted on Github Pages at http://richardwestenra.com/guardian-dev-test/ and visible on the `gh-pages` branch.
 
 ## Dev setup/installation:
 
@@ -22,9 +13,5 @@
 5. Use the following grunt commands: 
     - `grunt serve` runs the server for local dev work
     - `grunt` creates a production build in `/dist/`
-    - `grunt deploy` makes a build and deploys it to the test server with Git
+    - `grunt deploy` makes a build and deploys it to gh-pages
     - `grunt zip` makes a build and creates a zipped deliverable file in `/zips`
-
-#### Note:
-
-- Social/embed images go in the `/app/social` directory, NOT the `/app/images` directory, in order to prevent their filenames being revved.
