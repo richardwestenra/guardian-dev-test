@@ -23,9 +23,59 @@
       <p class="browsehappy">Sorry, your browser is not supported :(. If possible, please consider trying a <a href="http://browsehappy.com/">modern browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <header class="header wrapper">
+      <h1>Guardian Developer Test</h1>
+    </header>
+
+    <div class="tabs wrapper">
+
+      <ol class="tabs__container" id="tabs" role="tablist">
+        <li class="tabs__tab tabs__tab--selected" id="tabs-0-tab" role="tab" aria-selected="true" aria-controls="tabs-0">
+          <a href="#tabs-0">UK News</a>
+        </li>
+        <li class="tabs__tab" id="tabs-1-tab" role="tab" aria-selected="false" aria-controls="tabs-1">
+          <a href="#tabs-1">Football</a>
+        </li>
+        <li class="tabs__tab" id="tabs-2-tab" role="tab" aria-selected="false" aria-controls="tabs-2">
+          <a href="#tabs-2">Travel</a>
+        </li>
+      </ol>
+
+      <div class="tabs__content" id="tabs-content">
+        <div id="tabs-0" class="tabs__panel" role="tabpanel" aria-labelledby="tabs-0-tab">
+          <ol class="tabs__posts" id="tabs-0-posts">
+          </ol>
+        </div>
+        <div id="tabs-1" class="tabs__panel" role="tabpanel" aria-labelledby="tabs-1-tab" style="display: none;">
+          <ol class="tabs__posts" id="tabs-1-posts">
+          </ol>
+        </div>
+        <div id="tabs-2" class="tabs__panel" role="tabpanel" aria-labelledby="tabs-2-tab" style="display: none;">
+          <ol class="tabs__posts" id="tabs-2-posts">
+          </ol>
+        </div>
+      </div>
+
+      <!--
+      Note:
+      I'm not sure what The Guardian's developers use for HTML templating.
+      I figured I'd have a play with Ractive, since it was made by Guardian devs.
+      It's overkill for this example, but hey at least it helps separate concerns.
+       -->
+      <script type="text/template" id="tabs-posts-template">
+        {{#each posts}}
+          <li class="tabs__post">
+            <a href="{{webUrl}}">{{webTitle}}</a>
+          </li>
+        {{/each}}
+      </script>
+    </div>
+
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="/bower_components/es6-promise-polyfill/promise.js"></script>
+    <script src="/bower_components/ractive/ractive.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

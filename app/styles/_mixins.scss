@@ -1,7 +1,7 @@
 //--- Mixins ---//
 
-@mixin sansSerif {
-    font-family: sans-serif;
+@mixin baseFont {
+    font-family: Georgia, serif;
 }
 @mixin noList {
   list-style: none;

@@ -5,3 +5,63 @@
 @import "variables";
 @import "mixins";
 @import "base";
+
+.header {
+  text-align: center;
+}
+
+.tabs {
+  border: 2px solid $c_bg-alt;
+  max-width: 600px;
+}
+
+.tabs__container {
+  @include noList;
+  @include clearfix;
+  text-align: center;
+}
+
+.tabs__tab {
+  float: left;
+  width: (100% / 3);
+  background: $c_bg-alt;
+
+  &--selected {
+    font-weight: bold;
+    background: $c_bg;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: $c_base;
+    padding: 0.5em;
+    white-space: nowrap;
+  }
+
+}
+
+.tabs__panel {
+  padding: 1em;
+}
+.tabs__posts {
+  margin: 0;
+  padding-left: 1.5em;
+}
+.tabs__post {
+  padding-bottom: 0.4em;
+  margin-bottom: 0.3em;
+  border-bottom: 1px solid $c_bg-alt;
+  &:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  a {
+    text-decoration: none;
+    color: $c_base;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
