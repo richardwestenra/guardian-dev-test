@@ -56,18 +56,13 @@
         </div>
       </div>
 
-      <!--
-      Note:
-      I'm not sure what The Guardian's developers use for HTML templating.
-      I figured I'd have a play with Ractive, since it was made by Guardian devs.
-      It's overkill for this example, but hey at least it helps separate concerns.
-       -->
+      <!-- Mustache template -->
       <script type="text/template" id="tabs-posts-template">
-        {{#each posts}}
+        {{#posts}}
           <li class="tabs__post">
             <a href="{{webUrl}}">{{webTitle}}</a>
           </li>
-        {{/each}}
+        {{/posts}}
       </script>
     </div>
 
@@ -75,7 +70,7 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/es6-promise-polyfill/promise.js"></script>
-    <script src="/bower_components/ractive/ractive.js"></script>
+    <script src="/bower_components/mustache.js/mustache.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

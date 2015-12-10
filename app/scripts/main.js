@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-/* globals Ractive */
+/* globals Mustache */
 
 (function(){
 
@@ -91,19 +91,12 @@
   }
 
 
-  /*
-    Note:
-    Rather than destroying existing ractive elements and
-    creating a new set each time, ultimately I'd prefer to
-    bind this data to the HTML and update it properly.
-    Sadly, there wasn't enough time to expore this fully.
-  */
   function makeList(id, {response: {results: posts} }) {
-    new Ractive({
-      el: `tabs-${id}-posts`,
-      template: postsTemplate,
-      data: {posts}
-    });
+    var el = document.getElementById(`tabs-${id}-posts`);
+    el.innerHTML = Mustache.render(
+      postsTemplate,
+      { posts }
+    );
   }
 
 
