@@ -48,24 +48,19 @@
         </div>
       </div>
 
-      <!--
-      Note:
-      I'm not sure what The Guardian's developers use for HTML templating.
-      I figured I'd have a play with Ractive, since it was made by Guardian devs.
-      It's overkill for this example, but hey at least it helps separate concerns.
-       -->
+      <!-- Mustache template -->
       <script type="text/template" id="tabs-posts-template">
-        {{#each posts}}
+        {{#posts}}
           <li class="tabs__post">
             <a href="{{webUrl}}">{{webTitle}}</a>
           </li>
-        {{/each}}
+        {{/posts}}
       </script>
     </div>
 
 
-    <script src="scripts/vendor.8836f593.js"></script>
+    <script src="scripts/vendor.447b0f59.js"></script>
 
-    <script src="scripts/main.9686d444.js"></script>
+    <script src="scripts/main.d9a66f62.js"></script>
   </body>
 </html>
